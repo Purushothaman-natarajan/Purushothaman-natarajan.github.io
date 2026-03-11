@@ -506,6 +506,19 @@ body {
   transform: translateY(-3px);
 }
 
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: var(--text-primary);
+  border: none;
+  box-shadow: 0 12px 30px rgba(255, 0, 110, 0.3);
+}
+
+.btn-accent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(255, 0, 110, 0.35);
+  filter: brightness(1.05);
+}
+
 
 /* Hero Stats */
 .hero-stats {
@@ -1934,6 +1947,67 @@ body {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.45), rgba(0, 0, 0, 0.7));
 }
 
+/* ===== FOOTER CTA ===== */
+.footer-cta {
+  padding: 80px 0 50px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(255, 0, 110, 0.06));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cta-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cta-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cta-kicker {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cta-copy h3 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--text-primary);
+  line-height: 1.4;
+  max-width: 720px;
+}
+
+.cta-subtext {
+  margin: 4px 0 0 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cta-subtext a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-subtext a:hover {
+  text-decoration: underline;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 /* Icon sizing for consistency */
 i,
 .fa,
@@ -2086,6 +2160,12 @@ i,
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
