@@ -311,7 +311,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(240px, 320px);
-  align-items: start;
+  align-items: center;
   gap: 24px;
   justify-content: center;
 }
@@ -348,6 +348,30 @@ body {
   max-width: 620px;
 }
 
+.hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.hero-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.hero-list li::before {
+  content: '•';
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1;
+}
+
 .hero-actions {
   flex: 1;
   display: flex;
@@ -358,7 +382,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  align-self: flex-start;
+  align-self: center;
+  justify-content: center;
   width: 260px;
   flex-shrink: 0;
 }
