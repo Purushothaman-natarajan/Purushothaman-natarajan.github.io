@@ -1,48 +1,49 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
-  
-  if (hamburger) {
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
-      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+      navMenu.classList.toggle('show');
     });
   }
 
-  // Active nav link
-  const navLinks = document.querySelectorAll('.nav-link');
-  
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
-      if (navMenu) navMenu.style.display = 'none';
+      navMenu?.classList.remove('show');
     });
   });
 
-  // Scroll animation
-  window.addEventListener('scroll', () => {
+  const handleScrollSpy = () => {
     navLinks.forEach(link => {
-      const targetId = link.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      
+      const targetId = link.getAttribute('href')?.substring(1);
+      const targetSection = targetId ? document.getElementById(targetId) : null;
+
       if (targetSection) {
         const rect = targetSection.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+        if (rect.top <= window.innerHeight * 0.4 && rect.bottom > window.innerHeight * 0.15) {
           navLinks.forEach(l => l.classList.remove('active'));
           link.classList.add('active');
         }
       }
     });
-  });
+  };
 
-  // Smooth scroll
+  window.addEventListener('scroll', handleScrollSpy);
+  handleScrollSpy();
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
+    anchor.addEventListener('click', function(event) {
+      event.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
-        target.scrollIntoView({ behavior: 'smoot
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 
   const resumeModal = document.getElementById('resumeModal');
   const papersModal = document.getElementById('papersModal');
@@ -78,10 +79,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (event.key === 'Escape') {
       [resumeModal, papersModal].forEach(closeModal);
     }
-  });
-});
-block: 'start' });
-      }
-    });
   });
 });
