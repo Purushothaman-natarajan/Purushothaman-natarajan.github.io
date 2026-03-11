@@ -8,92 +8,95 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <main class="section" style="padding-top:120px;">
-    <div class="container" style="gap:32px;">
-      <div class="section-header">
-        <h2>AI Systems Consulting – GenAI, LLM Agents, and Computer Vision</h2>
-        <div class="header-line"></div>
+<body class="consulting-page">
+  <main class="consult-hero">
+    <div class="consult-hero__bg"></div>
+    <div class="consult-hero__content">
+      <p class="consult-kicker">Consulting & Delivery</p>
+      <h1>AI Systems Consulting</h1>
+      <p class="consult-lead">
+        I help startups and enterprises build production-ready AI systems using GenAI, LLM agents, computer vision, and scalable ML infrastructure.
+      </p>
+      <p class="consult-lead secondary">
+        From prototype to deployment — I design and implement AI pipelines that automate workflows, extract insights, and power intelligent products.
+      </p>
+      <div class="consult-actions">
+        <a href="#consult-form" class="btn btn-primary">Start an AI Project</a>
+        <a href="mailto:purushothamanprt@gmail.com" class="btn btn-accent">Email me directly</a>
       </div>
-
-      <div class="section-card">
-        <h1 style="margin:0 0 10px 0;">AI Systems Consulting</h1>
-        <p>
-          I help startups and enterprises build production-ready AI systems using GenAI, LLM agents, computer vision, and scalable ML infrastructure.
-        </p>
-        <p>
-          From prototype to deployment — I design and implement AI pipelines that automate workflows, extract insights, and power intelligent products.
-        </p>
-        <div class="cta-actions" style="margin-top:16px;">
-          <a href="index.html#contact" class="btn btn-primary">Start an AI Project</a>
-          <a href="mailto:purushothamanprt@gmail.com" class="btn btn-accent">Email me directly</a>
-        </div>
+      <div class="consult-tags">
+        <span>GenAI delivery</span><span>LLM agents</span><span>Computer vision</span><span>Document AI</span><span>MLOps</span>
       </div>
-
-      <div class="section-grid">
-        <div class="section-card">
-          <h3>Engagement Process</h3>
-          <ol style="margin:0; padding-left:18px; color: var(--text-secondary); line-height:1.6;">
-            <li>Discovery — understand your problem and data.</li>
-            <li>Architecture — design scalable AI system architecture.</li>
-            <li>Development — implement models, pipelines, and APIs.</li>
-            <li>Deployment — ship with monitoring and integrations.</li>
-          </ol>
-        </div>
-        <div class="section-card">
-          <h3>Technologies I Use</h3>
-          <p style="margin:0; color: var(--text-secondary); line-height:1.6;">
-            Whatever it takes to ship reliable systems: GenAI stacks, LLM agents with tool-calling, computer vision models, vector databases, orchestration layers, observability, and MLOps to keep it all running.
-          </p>
-        </div>
-      </div>
-
-      <div class="section-card">
-        <h3>Who I Work With</h3>
-        <ul class="hero-list">
-          <li>AI startups building GenAI products</li>
-          <li>Enterprises exploring automation with AI</li>
-          <li>Research teams building applied AI systems</li>
-          <li>Companies integrating computer vision into products</li>
+    </div>
+    <div class="consult-panel">
+      <div>
+        <h3>Recent Results</h3>
+        <ul>
+          <li>91% manual effort reduction via agentic workflows</li>
+          <li>Real-time CV pipelines across 200K+ SKUs</li>
+          <li>Doc AI stack cutting review time by 85%</li>
         </ul>
       </div>
-
-      <div class="section-card">
-        <h3>Start a Project</h3>
-        <p class="cta-subtext" style="margin-bottom:10px;">Submit the form or reach out directly at <a href="mailto:purushothamanprt@gmail.com">purushothamanprt@gmail.com</a>.</p>
-        <form class="contact-form" action="https://formspree.io/f/mojkdnnn" method="POST">
-          <label>
-            Name
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            Company
-            <input type="text" name="company">
-          </label>
-          <label>
-            Project Type
-            <input type="text" name="project_type">
-          </label>
-          <label>
-            Timeline
-            <input type="text" name="timeline">
-          </label>
-          <label>
-            Budget Range
-            <input type="text" name="budget">
-          </label>
-          <label>
-            Message
-            <textarea name="message" required></textarea>
-          </label>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-
-      <div class="cta-actions" style="margin-top:8px;">
-        <a href="index.html#contact" class="btn btn-tertiary">Back to portfolio</a>
+      <div class="consult-panel__cta">
+        <p>Need a roadmap or MVP in weeks?</p>
+        <a href="#consult-form" class="btn btn-tertiary">Book a discovery call</a>
       </div>
     </div>
   </main>
+
+  <section class="consult-section">
+    <div class="container consult-grid">
+      <div class="consult-card">
+        <h2>Engagement Process</h2>
+        <ol>
+          <li><strong>Discovery:</strong> Clarify the problem, data, and constraints.</li>
+          <li><strong>Architecture:</strong> Design scalable AI system blueprints.</li>
+          <li><strong>Development:</strong> Build models, pipelines, APIs, and guardrails.</li>
+          <li><strong>Deployment:</strong> Ship with monitoring, evals, and integrations.</li>
+        </ol>
+      </div>
+      <div class="consult-card">
+        <h2>Technologies I Use</h2>
+        <p>Use whatever delivers reliability: LLM agents with tool-calling, RAG, vector DBs, CV models, orchestration, observability, and MLOps to keep it running.</p>
+        <div class="consult-chips">
+          <span>GPT / Claude</span><span>LangGraph / LangChain</span><span>DSPy</span><span>YOLO / SAM</span><span>FAISS / Pinecone</span><span>FastAPI</span><span>Kubernetes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="consult-section">
+    <div class="container consult-grid two">
+      <div class="consult-card">
+        <h2>Who I Work With</h2>
+        <ul class="hero-list">
+          <li>AI startups building GenAI products</li>
+          <li>Enterprises exploring automation with AI</li>
+          <li>Research teams delivering applied AI systems</li>
+          <li>Companies integrating computer vision into products</li>
+        </ul>
+      </div>
+      <div class="consult-card" id="consult-form">
+        <h2>Start a Project</h2>
+        <p class="cta-subtext">Submit the form or reach out directly at <a href="mailto:purushothamanprt@gmail.com">purushothamanprt@gmail.com</a>.</p>
+        <form class="contact-form" action="https://formspree.io/f/mojkdnnn" method="POST">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Company<input type="text" name="company"></label>
+          <label>Project Type<input type="text" name="project_type"></label>
+          <label>Timeline<input type="text" name="timeline"></label>
+          <label>Budget Range<input type="text" name="budget"></label>
+          <label>Message<textarea name="message" required></textarea></label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="consult-section">
+    <div class="container consult-bottom-actions">
+      <a href="index.html#contact" class="btn btn-tertiary">Back to portfolio</a>
+      <a href="mailto:purushothamanprt@gmail.com" class="btn btn-primary">Email purushothamanprt@gmail.com</a>
+    </div>
+  </section>
 </body>
 </html>
