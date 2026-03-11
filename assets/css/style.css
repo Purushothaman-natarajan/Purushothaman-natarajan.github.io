@@ -193,6 +193,7 @@ body {
   transition: all 0.3s ease;
   font-size: 14px;
   padding: 0;
+  min-height: 44px; /* touch-friendly */
 }
 
 .quick-btn:hover {
@@ -293,27 +294,27 @@ body {
   50% { opacity: 1; }
 }
 
-  .hero-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 50px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 140px 20px 60px;
-    width: 120%;
-    position: relative;
-    z-index: 1;
-  }
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 140px 20px 60px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
 
-  .hero-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
-    align-items: center;
-    gap: 48px;
-    justify-content: center;
-  }
+.hero-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(240px, 320px);
+  align-items: start;
+  gap: 24px;
+  justify-content: center;
+}
 
 .hero-title {
   font-size: 52px;
@@ -342,7 +343,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   min-width: 320px;
   max-width: 620px;
 }
@@ -356,9 +357,9 @@ body {
 .hero-cta {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
   align-self: flex-start;
-  width: 240px;
+  width: 260px;
   flex-shrink: 0;
 }
 
@@ -373,24 +374,26 @@ body {
     gap: 40px;
   }
 
-  .hero-text {
-    align-items: center;
-    text-align: center;
-  }
-
   .hero-headline {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+  .hero-subtitle {
+    text-align: center;
+    max-width: 100%;
   }
 
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
     align-items: center;
+    text-align: center;
   }
 
   .hero-cta {
-    width: 260px;
+    width: 100%;
     align-items: center;
+    align-self: center;
   }
 }
 
@@ -405,7 +408,7 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -414,6 +417,7 @@ body {
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   white-space: nowrap;
+  min-height: 44px; /* touch-friendly */
 }
 
 .btn-primary {
@@ -668,6 +672,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  min-height: 40px;
 }
 
 .btn-small:hover {
@@ -1321,6 +1326,7 @@ body {
   background: rgba(0, 212, 255, 0.1);
   border-radius: 6px;
   transition: all 0.3s ease;
+  min-height: 44px;
 }
 
 .project-link:hover {
@@ -1673,6 +1679,7 @@ body {
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  min-height: 120px;
 }
 
 .contact-item::after {
@@ -1770,6 +1777,7 @@ body {
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  min-height: 44px;
 }
 
 .footer-link::after {
@@ -1813,6 +1821,7 @@ body {
   font-size: 15px;
   border-radius: 18px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  min-height: 46px;
 }
 
 .footer-link.email-link i {
@@ -1841,6 +1850,7 @@ body {
   font-weight: 600;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  min-height: 46px;
 }
 
 .footer-contact-link:hover,
@@ -1851,6 +1861,24 @@ body {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.45), rgba(0, 0, 0, 0.7));
 }
 
+/* Icon sizing for consistency */
+i,
+.fa,
+.fab,
+.fas {
+  line-height: 1;
+}
+
+.btn i,
+.quick-btn i,
+.project-link i,
+.footer-link i,
+.footer-link.email-link i,
+.footer-contact-link i,
+.btn-small i {
+  font-size: 1.05em;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero-stats {
@@ -1859,6 +1887,10 @@ body {
 
   .hero-title {
     font-size: 44px;
+  }
+
+  .hero-grid {
+    gap: 22px;
   }
 
   .about-content {
@@ -1965,6 +1997,29 @@ body {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 80px 0 40px;
+  }
+
+  .hero-container {
+    padding: 120px 16px 40px;
+  }
+
+  .hero-grid {
+    gap: 30px;
+  }
+
+  .hero-stats {
+    gap: 16px;
+  }
+
+  .stat-box {
+    min-width: unset;
+    width: 100%;
   }
 }
 
