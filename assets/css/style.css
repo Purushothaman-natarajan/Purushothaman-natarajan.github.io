@@ -1997,6 +1997,22 @@ i,
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    align-items: center;
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .footer-link,
+  .footer-link.email-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
 
