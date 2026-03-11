@@ -2208,6 +2208,62 @@ i,
   }
 }
 
+@media (max-width: 768px) {
+  .consult-hero {
+    padding: 110px 16px 60px;
+    gap: 18px;
+  }
+
+  .consult-hero__content,
+  .consult-panel {
+    padding: 20px;
+  }
+
+  .consult-hero h1 {
+    font-size: 30px;
+  }
+
+  .consult-actions .btn,
+  .consult-bottom-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .consult-tags {
+    gap: 8px;
+  }
+
+  .consult-grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-bottom-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 540px) {
+  .consult-hero {
+    padding: 100px 14px 50px;
+  }
+
+  .consult-hero h1 {
+    font-size: 26px;
+  }
+
+  .consult-panel,
+  .consult-card {
+    padding: 18px;
+  }
+
+  .consult-chips span,
+  .consult-tags span {
+    font-size: 11px;
+    padding: 6px 9px;
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero-stats {
