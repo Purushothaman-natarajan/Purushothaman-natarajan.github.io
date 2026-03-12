@@ -2235,6 +2235,7 @@ i,
 .consult-grid.two {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: stretch;
+  justify-items: stretch;
 }
 
 .consult-card {
@@ -2407,6 +2408,11 @@ i,
 
   .consult-grid.two {
     grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .consult-card {
+    width: min(520px, 100%);
   }
 
   .consult-bottom-actions {
@@ -2417,6 +2423,15 @@ i,
   .final-cta__actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .final-cta__box {
+    align-items: center;
+    text-align: center;
+  }
+
+  .final-cta__box p {
+    text-align: center;
   }
 }
 
