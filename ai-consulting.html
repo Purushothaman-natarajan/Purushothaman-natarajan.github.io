@@ -134,24 +134,35 @@
   </section>
 
   <section class="consult-section">
+    <div class="container consult-intro">
+      <div>
+        <p class="consult-kicker">GenAI consulting, LLM agents, and computer vision systems for US/EU startups</p>
+        <h2 class="consult-headline">Ship production-grade AI in weeks, not quarters.</h2>
+        <p class="consult-subhead">Strategy, build, and deployment for teams that need reliable, monitored AI systems.</p>
+      </div>
+      <div class="trust-row">
+        <div class="trust-chip">17+ AI projects shipped</div>
+        <div class="trust-chip">91% manual effort reduction</div>
+      </div>
+    </div>
+
     <div class="container consult-grid two">
       <div class="consult-card">
-        <h2>Who I Work With</h2>
+        <h2>Outcomes I Deliver</h2>
         <ul class="hero-list">
-          <li>AI startups building GenAI products</li>
-          <li>Enterprises exploring AI automation</li>
-          <li>Research labs and R&D teams</li>
-          <li>Product companies integrating AI</li>
+          <li>Ship a GenAI prototype in 3 weeks with evals and guardrails</li>
+          <li>Automate knowledge workflows end-to-end with agents + RAG</li>
+          <li>Production CV/OCR pipelines with measurable accuracy targets</li>
         </ul>
       </div>
       <div class="consult-card" id="consult-form">
         <h2>Start a Project</h2>
         <p class="cta-subtext">Submit the form or reach out directly at <a href="mailto:purushothamanprt@gmail.com">purushothamanprt@gmail.com</a>.</p>
-        <form class="contact-form" action="https://formspree.io/f/mojkdnnn" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/mojkdnnn" method="POST" id="consultContactForm">
           <label>Name<input type="text" name="name" required></label>
           <label>Company<input type="text" name="company"></label>
           <label>Project Type
-            <select name="project_type" required>
+            <select name="project_type">
               <option value="GenAI Project">GenAI Project</option>
               <option value="Computer Vision">Computer Vision</option>
               <option value="AI Consulting">AI Consulting</option>
@@ -159,11 +170,59 @@
               <option value="LLM Agents">LLM Agents</option>
             </select>
           </label>
-          <label>Timeline<input type="text" name="timeline"></label>
-          <label>Budget<input type="text" name="budget"></label>
+          <label>Timeline
+            <select name="timeline">
+              <option value="" selected>Pick a range</option>
+              <option value="2-3 weeks">2–3 weeks</option>
+              <option value="4-6 weeks">4–6 weeks</option>
+              <option value="6-10 weeks">6–10 weeks</option>
+              <option value="10+ weeks">10+ weeks</option>
+            </select>
+          </label>
+          <label>Budget
+            <select name="budget">
+              <option value="" selected>Select a bracket</option>
+              <option value="<$10k">Under $10k</option>
+              <option value="$10k-$25k">$10k–$25k</option>
+              <option value="$25k-$50k">$25k–$50k</option>
+              <option value="$50k+">$50k+</option>
+            </select>
+          </label>
+          <label class="checkbox-line"><input type="checkbox" name="intro_call" value="yes"> I want a 15-min intro call</label>
           <label>Message<textarea name="message" required></textarea></label>
-          <button type="submit">Send</button>
+          <button type="submit" id="consultSubmitBtn">Send</button>
+          <p class="form-status" id="consultFormStatus" aria-live="polite"></p>
         </form>
+      </div>
+    </div>
+
+    <div class="container consult-grid package-grid">
+      <div class="consult-card">
+        <h3>Sprint</h3>
+        <p class="package-meta">2–3 weeks · $6k–$10k</p>
+        <ul class="hero-list">
+          <li>Discovery + architecture</li>
+          <li>Clickable prototype or API spike</li>
+          <li>Implementation plan with risks</li>
+        </ul>
+      </div>
+      <div class="consult-card">
+        <h3>MVP</h3>
+        <p class="package-meta">4–6 weeks · $15k–$30k</p>
+        <ul class="hero-list">
+          <li>Build core agents/CV/OCR pipeline</li>
+          <li>Evals + monitoring wired in</li>
+          <li>Deploy to your cloud</li>
+        </ul>
+      </div>
+      <div class="consult-card">
+        <h3>Advisory</h3>
+        <p class="package-meta">Monthly · $3k+</p>
+        <ul class="hero-list">
+          <li>Architecture reviews</li>
+          <li>Model/vendor selection</li>
+          <li>On-call for launches</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -175,8 +234,8 @@
         <p>If you're exploring GenAI, computer vision, or AI automation, I'd love to help.</p>
       </div>
       <div class="final-cta__actions">
-        <a href="#consult-form" class="btn btn-primary">Start a Project</a>
-        <a href="https://linkedin.com/in/purushothamann" class="btn btn-secondary" target="_blank" rel="noreferrer">LinkedIn - Let's Connect</a>
+        <a href="https://calendly.com/purushothamann/intro" class="btn btn-primary" target="_blank" rel="noreferrer">Book Intro Call</a>
+        <a href="mailto:purushothamanprt@gmail.com" class="btn btn-secondary">Email Me</a>
         <a href="assets/files/Purushothaman_Natarajan_CV.pdf" class="btn btn-tertiary" download>Download Resume</a>
       </div>
     </div>

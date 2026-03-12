@@ -2227,9 +2227,46 @@ i,
   padding: 60px 20px;
 }
 
+.consult-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.consult-headline {
+  font-size: 30px;
+  margin: 4px 0;
+}
+
+.consult-subhead {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.trust-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.trust-chip {
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 .consult-grid {
   display: grid;
   gap: 24px;
+}
+
+.package-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 24px;
 }
 
 .consult-grid.two {
@@ -2263,6 +2300,31 @@ i,
 .consult-card p {
   color: var(--text-secondary);
   line-height: 1.6;
+}
+
+.package-grid .consult-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.package-meta {
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.checkbox-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.form-status {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--accent);
+  min-height: 20px;
 }
 
 .consult-chips {
@@ -2357,7 +2419,7 @@ i,
 .final-cta__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 14px;
 }
 
 @media (max-width: 960px) {
@@ -2415,6 +2477,14 @@ i,
     width: min(520px, 100%);
   }
 
+  .consult-section {
+    padding-top: 80px;
+  }
+
+  .trust-row {
+    justify-content: flex-start;
+  }
+
   .section-grid,
   .education-grid,
   .experience-grid,
@@ -2468,6 +2538,11 @@ i,
   .consult-panel,
   .consult-card {
     padding: 18px;
+  }
+
+  .trust-row {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .consult-chips span,

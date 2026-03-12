@@ -80,4 +80,40 @@ document.addEventListener('DOMContentLoaded', () => {
       [resumeModal, papersModal].forEach(closeModal);
     }
   });
+
+  const consultForm = document.getElementById('consultContactForm');
+  const consultStatus = document.getElementById('consultFormStatus');
+  const consultSubmitBtn = document.getElementById('consultSubmitBtn');
+
+  if (consultForm && consultSubmitBtn && consultStatus) {
+    consultForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      consultSubmitBtn.disabled = true;
+      const originalText = consultSubmitBtn.textContent;
+      consultSubmitBtn.textContent = 'Sending...';
+      consultStatus.textContent = '';
+
+      try {
+        const formData = new FormData(consultForm);
+        const response = await fetch(consultForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' }
+        });
+
+        if (response.ok) {
+          consultSubmitBtn.textContent = 'Sent!';
+          consultStatus.textContent = 'Thanks! I will reply within one business day.';
+          consultForm.reset();
+        } else {
+          throw new Error('Formspree error');
+        }
+      } catch (error) {
+        consultSubmitBtn.disabled = false;
+        consultSubmitBtn.textContent = originalText;
+        consultStatus.textContent = 'Something went wrong. Please email me directly.';
+        console.error(error);
+      }
+    });
+  }
 });
