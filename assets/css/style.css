@@ -351,7 +351,7 @@ body {
   gap: 50px;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 140px 20px 60px;
+  padding: 140px 28px 60px;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -2475,6 +2475,7 @@ i,
 
   .consult-card {
     width: min(520px, 100%);
+    margin: 0 auto;
   }
 
   .consult-section {
@@ -2598,6 +2599,16 @@ i,
 @media (max-width: 768px) {
   :root {
     --navbar-height: 60px;
+  }
+
+  .hero {
+    padding: 20px 0 40px;
+    align-items: flex-start;
+  }
+
+  .hero-container {
+    padding: 100px 22px 50px;
+    gap: 30px;
   }
 
   .contact-grid,
