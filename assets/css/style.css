@@ -2471,11 +2471,16 @@ i,
   .consult-grid.two {
     grid-template-columns: 1fr;
     justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
   }
 
   .consult-card {
     width: min(520px, 100%);
     margin: 0 auto;
+    align-self: center;
   }
 
   .consult-section {
@@ -2602,13 +2607,14 @@ i,
   }
 
   .hero {
-    padding: 20px 0 40px;
+    margin-top: 20px;
+    padding: 10px 0 32px;
     align-items: flex-start;
   }
 
   .hero-container {
-    padding: 100px 22px 50px;
-    gap: 30px;
+    padding: 80px 18px 40px;
+    gap: 26px;
   }
 
   .contact-grid,
