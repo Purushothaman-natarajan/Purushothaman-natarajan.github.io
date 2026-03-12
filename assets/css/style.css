@@ -2804,11 +2804,11 @@ i,
 
 @media (max-width: 600px) {
   .hero {
-    padding: 80px 0 40px;
+    padding: 40px 0 32px;
   }
 
   .hero-container {
-    padding: 120px 16px 40px;
+    padding: calc(var(--navbar-height) + 4px) 16px 32px;
   }
 
   .hero-grid {
