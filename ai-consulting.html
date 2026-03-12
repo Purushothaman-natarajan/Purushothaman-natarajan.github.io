@@ -20,10 +20,10 @@
         <span class="logo-title">Purushothaman Natarajan</span>
       </div>
       <ul class="nav-menu">
-        <li><a href="index.html#home" class="nav-link">Home</a></li>
-        <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-        <li><a href="index.html#experience" class="nav-link">Experience</a></li>
-        <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="index.html#home" class="nav-link" data-soft-nav>Home</a></li>
+        <li><a href="index.html#projects" class="nav-link" data-soft-nav>Projects</a></li>
+        <li><a href="index.html#experience" class="nav-link" data-soft-nav>Experience</a></li>
+        <li><a href="index.html#skills" class="nav-link" data-soft-nav>Skills</a></li>
         <li><a href="#consult-form" class="nav-link active">Consulting</a></li>
         <li><a href="#consult-form" class="nav-link">Contact</a></li>
       </ul>
@@ -48,7 +48,7 @@
 
   <main class="consult-hero">
     <div class="consult-hero__bg"></div>
-    <div class="consult-hero__content">
+    <div class="consult-hero__content reveal" data-reveal-delay="0ms">
       <p class="consult-kicker">Consulting & Delivery</p>
       <h1>AIML Systems Consulting</h1>
       <p class="consult-lead">
@@ -64,7 +64,7 @@
         <span>GenAI delivery</span><span>AI Agents</span><span>Computer vision</span><span>Document AI</span><span>MLOps</span>
       </div>
     </div>
-    <div class="consult-panel">
+    <div class="consult-panel reveal" data-reveal-delay="120ms">
       <div>
         <h3>Recent Results</h3>
         <ul>
@@ -82,7 +82,7 @@
 
   <section class="consult-section compact">
     <div class="container consult-grid">
-      <div class="consult-card">
+      <div class="consult-card reveal" data-reveal-delay="0ms">
         <h2>Problems I Help Solve</h2>
         <ul class="hero-list">
           <li>GenAI knowledge assistants and RAG systems</li>
@@ -92,7 +92,7 @@
           <li>AI infrastructure and deployment</li>
         </ul>
       </div>
-      <div class="consult-card">
+      <div class="consult-card reveal" data-reveal-delay="80ms">
         <h2>Technologies I Use</h2>
         <p>Use whatever delivers reliability: LLM agents with tool-calling, RAG, vector DBs, CV models, orchestration, observability, and MLOps to keep it running.</p>
         <div class="consult-chips">
@@ -104,25 +104,25 @@
 
   <section class="consult-section compact">
     <div class="container">
-      <div class="consult-card">
+      <div class="consult-card reveal" data-reveal-delay="0ms">
         <h2>Engagement Process</h2>
         <div class="process-row">
-          <div class="process-card">
+          <div class="process-card reveal" data-reveal-delay="0ms">
             <span class="process-step">01</span>
             <h4>Discovery</h4>
             <p>Understand the problem, data, users, and constraints.</p>
           </div>
-          <div class="process-card">
+          <div class="process-card reveal" data-reveal-delay="60ms">
             <span class="process-step">02</span>
             <h4>Architecture</h4>
             <p>Design scalable AI system blueprints and guardrails.</p>
           </div>
-          <div class="process-card">
+          <div class="process-card reveal" data-reveal-delay="120ms">
             <span class="process-step">03</span>
             <h4>Development</h4>
             <p>Build models, pipelines, agents, and APIs with evals.</p>
           </div>
-          <div class="process-card">
+          <div class="process-card reveal" data-reveal-delay="180ms">
             <span class="process-step">04</span>
             <h4>Deployment</h4>
             <p>Production deployment with monitoring, CI/CD, and handoff.</p>
@@ -146,7 +146,7 @@
     </div>
 
     <div class="container consult-grid two">
-      <div class="consult-card">
+      <div class="consult-card reveal" data-reveal-delay="0ms">
         <h2>Outcomes I Deliver</h2>
         <ul class="hero-list">
           <li>Ship a GenAI prototype in 3 weeks with evals and guardrails</li>
@@ -154,7 +154,7 @@
           <li>Production CV/OCR pipelines with measurable accuracy targets</li>
         </ul>
       </div>
-      <div class="consult-card" id="consult-form">
+      <div class="consult-card reveal" data-reveal-delay="80ms" id="consult-form">
         <h2>Start a Project</h2>
         <p class="cta-subtext">Submit the form or reach out directly at <a href="mailto:purushothamanprt@gmail.com">purushothamanprt@gmail.com</a>.</p>
         <form class="contact-form" action="https://formspree.io/f/mojkdnnn" method="POST" id="consultContactForm">
@@ -196,7 +196,7 @@
     </div>
 
     <div class="container consult-grid package-grid">
-      <div class="consult-card">
+      <div class="consult-card reveal" data-reveal-delay="0ms">
         <h3>Sprint</h3>
         <p class="package-meta">2-3 weeks | $6k-$10k</p>
         <ul class="hero-list">
@@ -205,7 +205,7 @@
           <li>Implementation plan with risks</li>
         </ul>
       </div>
-      <div class="consult-card">
+      <div class="consult-card reveal" data-reveal-delay="80ms">
         <h3>MVP</h3>
         <p class="package-meta">4-6 weeks | $15k-$30k</p>
         <ul class="hero-list">
@@ -214,7 +214,7 @@
           <li>Deploy to your cloud</li>
         </ul>
       </div>
-      <div class="consult-card">
+      <div class="consult-card reveal" data-reveal-delay="140ms">
         <h3>Advisory</h3>
         <p class="package-meta">Monthly | $3k+</p>
         <ul class="hero-list">
@@ -227,7 +227,7 @@
   </section>
 
   <section class="consult-section final-cta">
-    <div class="container final-cta__box">
+    <div class="container final-cta__box reveal" data-reveal-delay="0ms">
       <div>
         <h2>Let's Build Your AI System</h2>
         <p>If you're exploring GenAI, computer vision, or AI automation, I'd love to help.</p>

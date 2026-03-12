@@ -37,6 +37,27 @@ body {
   padding: 0;
 }
 
+.page-transition-init {
+  opacity: 0;
+  transition: opacity 380ms ease-in-out;
+}
+
+.page-transition-ready {
+  opacity: 1;
+}
+
+.page-leave {
+  opacity: 0;
+  transition: opacity 260ms ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-init,
+  .page-leave {
+    transition-duration: 0ms;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -2098,6 +2119,23 @@ i,
   align-items: stretch;
   width: min(1180px, 100% - 40px);
   margin: 0 auto;
+}
+
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: transform 650ms ease, opacity 650ms ease;
+  will-change: transform, opacity;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .consult-hero__bg {

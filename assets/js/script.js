@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('js-enabled', 'page-transition-init');
+  setTimeout(() => {
+    requestAnimationFrame(() => document.body.classList.add('page-transition-ready'));
+  }, 40);
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -45,6 +49,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Soft page transitions between index and consulting
+  const softLinks = document.querySelectorAll('a[data-soft-nav]');
+  softLinks.forEach(link => {
+    if (link.target === '_blank') return;
+    link.addEventListener('click', event => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      // only intercept full page navigations, not same-page anchors
+      if (href.startsWith('#')) return;
+      event.preventDefault();
+      document.body.classList.add('page-leave');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 280);
+    });
+  });
+
   const resumeModal = document.getElementById('resumeModal');
   const papersModal = document.getElementById('papersModal');
   const heroResumeBtn = document.getElementById('heroResumeBtn');
@@ -80,6 +101,28 @@ document.addEventListener('DOMContentLoaded', () => {
       [resumeModal, papersModal].forEach(closeModal);
     }
   });
+
+  // Smooth slide-in reveals
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = entry.target.dataset.revealDelay || '0ms';
+            entry.target.style.transitionDelay = delay;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+      revealEls.forEach(el => observer.observe(el));
+    } else {
+      // Fallback: show immediately if observer not supported
+      revealEls.forEach(el => el.classList.add('visible'));
+    }
+  }
 
   const consultForm = document.getElementById('consultContactForm');
   const consultStatus = document.getElementById('consultFormStatus');
