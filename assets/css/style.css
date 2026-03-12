@@ -2415,6 +2415,27 @@ i,
     width: min(520px, 100%);
   }
 
+  .section-grid,
+  .education-grid,
+  .experience-grid,
+  .projects-container,
+  .skills-matrix,
+  .certifications-grid,
+  .additional-grid {
+    justify-items: center;
+  }
+
+  .section-card,
+  .education-card,
+  .experience-card,
+  .project-card,
+  .skill-group,
+  .cert-card,
+  .additional-card,
+  .publication-card {
+    width: min(520px, 100%);
+  }
+
   .consult-bottom-actions {
     flex-direction: column;
     align-items: stretch;
