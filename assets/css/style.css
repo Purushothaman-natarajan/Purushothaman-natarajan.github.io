@@ -2842,7 +2842,8 @@ i,
   }
 
   .about-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
   }
 
   .about-img {
@@ -2874,6 +2875,52 @@ i,
 
   .modal-header h2 {
     font-size: 18px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+
+  .stat-item {
+    padding: 15px 10px;
+  }
+
+  .stat-item h4 {
+    font-size: 24px;
+  }
+
+  .stat-item p {
+    font-size: 11px;
+  }
+
+  .project-tag {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .project-card p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .project-tech {
+    justify-content: center;
+  }
+
+  .project-tech span {
+    font-size: 11px;
+    padding: 4px 8px;
   }
 }
 
