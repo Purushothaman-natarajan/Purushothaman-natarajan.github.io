@@ -181,17 +181,48 @@ body {
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   margin-left: auto;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+  background: rgba(37, 99, 235, 0.1);
 }
 
 .hamburger span {
+  display: block;
   width: 22px;
-  height: 2.5px;
+  height: 2px;
   background: var(--accent);
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  transform: translateY(-5px);
+}
+
+.hamburger span:nth-child(3) {
+  transform: translateY(5px);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-2px) rotate(-45deg);
 }
 
 /* Quick Action Buttons in Navbar */
@@ -294,14 +325,10 @@ body {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-    padding: 10px;
-    margin: -10px;
-    gap: 7px;
   }
 
   .hamburger span {
-    width: 28px;
-    height: 3px;
+    width: 22px;
   }
 
   .nav-menu {

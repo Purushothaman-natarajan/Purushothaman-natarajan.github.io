@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('show');
+      hamburger.classList.toggle('active');
     });
   }
 
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
       navMenu?.classList.remove('show');
+      hamburger?.classList.remove('active');
     });
   });
 
