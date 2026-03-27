@@ -187,10 +187,9 @@ body {
   height: 44px;
   cursor: pointer;
   margin-left: auto;
-  padding: 8px;
+  padding: 10px;
   border-radius: 8px;
   transition: background 0.2s ease;
-  gap: 6px;
 }
 
 .hamburger:hover {
@@ -206,13 +205,17 @@ body {
   transition: all 0.3s ease;
 }
 
+.hamburger span + span {
+  margin-top: 6px;
+}
+
 .hamburger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
-  opacity: 0;
   transform: scaleX(0);
+  opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
