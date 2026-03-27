@@ -331,15 +331,13 @@ body {
     top: var(--navbar-height);
     left: 0;
     width: 100%;
-    height: calc(100vh - var(--navbar-height));
+    height: 100%;
     flex-direction: column;
     gap: 0;
     background: #ffffff;
     padding: 0;
-    border-bottom: 1px solid #e2e8f0;
     z-index: 999;
     overflow-y: auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
 
   .nav-menu.show {
