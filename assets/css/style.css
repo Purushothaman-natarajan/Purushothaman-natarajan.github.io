@@ -1358,7 +1358,11 @@ body {
 
 @container (max-width: 640px) {
   .projects-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-card.large {
+    grid-column: span 1 !important;
   }
 }
 
@@ -2768,43 +2772,6 @@ i,
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projects-container {
-    grid-template-columns: 1fr !important;
-  }
-
-  .project-card.large {
-    grid-column: span 1 !important;
-  }
-
-  .project-card {
-    padding: 20px;
-  }
-
-  .project-tag {
-    display: block;
-    text-align: center;
-    margin-bottom: 12px;
-  }
-
-  .project-card h3 {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .project-card p {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  .project-tech {
-    justify-content: center;
-  }
-
-  .project-tech span {
-    font-size: 11px;
-    padding: 4px 8px;
-  }
-
   .about-img {
     max-width: 280px;
   }
@@ -2815,6 +2782,11 @@ i,
 
   .pub-header {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .pub-year {
+    align-self: flex-start;
   }
 
   .publication-card {
@@ -2823,16 +2795,35 @@ i,
 
   .pub-header h3 {
     font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .pub-abstract {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pub-stats {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pub-stats span {
+    font-size: 11px;
   }
 
   .pub-actions {
     flex-wrap: wrap;
     gap: 8px;
+    justify-content: center;
   }
 
   .pub-actions a {
     font-size: 12px;
     padding: 8px 12px;
+    flex: 1 1 auto;
+    text-align: center;
+    min-width: 100px;
   }
 
   .modal-content {
