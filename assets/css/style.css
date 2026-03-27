@@ -206,11 +206,11 @@ body {
 }
 
 .hamburger span + span {
-  margin-top: 6px;
+  margin-top: 5px;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -219,7 +219,7 @@ body {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Quick Action Buttons in Navbar */
