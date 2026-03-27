@@ -47,9 +47,9 @@
   <button class="quick-btn" id="resumeBtn" title="View Resume">
     <i class="fas fa-file-pdf"></i>
   </button>
-  <button class="quick-btn" id="papersBtn" title="View Papers">
+  <a class="quick-btn" href="#publications" title="View Papers">
     <i class="fas fa-book"></i>
-  </button>
+  </a>
   <a class="quick-btn" href="https://github.com/Purushothaman-natarajan" target="_blank" rel="noreferrer" title="GitHub">
     <i class="fab fa-github"></i>
   </a>
@@ -85,41 +85,22 @@
       </ul>
     </div>
     <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">
-        <span>View My Work</span>
-        <i class="fas fa-arrow-right"></i>
+      <a href="#enterprise-projects" class="btn btn-primary">
+        <span>Enterprise Projects</span>
+        <i class="fas fa-building"></i>
       </a>
-      <button class="btn btn-secondary" id="heroResumeBtn">
-        <span>Download Resume</span>
-        <i class="fas fa-download"></i>
-      </button>
+      <a href="#open-source-projects" class="btn btn-secondary">
+        <span>Open Source</span>
+        <i class="fab fa-github"></i>
       </a>
       <a href="#contact" class="btn btn-tertiary">
         <span>Get In Touch</span>
         <i class="fas fa-envelope"></i>
       </a>
-    </div>
-  </div>
-
-  <!-- Stats Section -->
-<div class="hero-stats">
-<div class="stat-box">
-<div class="stat-number">5+</div>
-<div class="stat-label">Years in AI</div>
-</div>
-<div class="stat-box">
-<div class="stat-number">17+</div>
-<div class="stat-label">Projects Delivered</div>
-</div>
-<div class="stat-box">
-<div class="stat-number">3</div>
-<div class="stat-label">Peer-Reviewed Papers</div>
-</div>
-<div class="stat-box">
-<div class="stat-number">15+</div>
-<div class="stat-label">Research Citations</div>
-</div>
-</div>
+      <button class="btn btn-quaternary" id="heroResumeBtn">
+        <span>Resume</span>
+        <i class="fas fa-download"></i>
+      </button>
 </div>
 </section>
 
@@ -139,67 +120,6 @@
 </div>
 </div>
 
-<!-- Papers Modal -->
-<div id="papersModal" class="modal">
-<div class="modal-content modal-lg">
-<span class="close">&times;</span>
-<div class="modal-header">
-<h2>Research Publications</h2>
-</div>
-<div class="modal-body papers-list">
-<div class="paper-preview">
-<div class="paper-header">
-<h3>Synth-SONAR: Sonar Image Synthesis with Enhanced Diversity and Realism</h3>
-<span class="paper-year">2024</span>
-</div>
-<p class="paper-authors">Purushothaman Natarajan, Kamal Basha, Athira Nambiar</p>
-<div class="paper-actions">
-<a href="https://arxiv.org/pdf/2410.08612" target="_blank" class="btn btn-small">
-<i class="fas fa-file-pdf"></i> View PDF
-</a>
-<a href="https://arxiv.org/abs/2410.08612" target="_blank" class="btn btn-small">
-<i class="fas fa-external-link-alt"></i> arXiv
-</a>
-</div>
-</div>
-
-<div class="paper-preview">
-<div class="paper-header">
-<h3>VALE: A Multimodal Visual and Language Explanation Framework</h3>
-<span class="paper-year">2024</span>
-</div>
-<p class="paper-authors">Purushothaman Natarajan, Athira Nambiar</p>
-<p class="paper-stats">50+ Citations | Highly Cited</p>
-<div class="paper-actions">
-<a href="https://arxiv.org/pdf/2408.12808" target="_blank" class="btn btn-small">
-<i class="fas fa-file-pdf"></i> View PDF
-</a>
-<a href="https://arxiv.org/abs/2408.12808" target="_blank" class="btn btn-small">
-<i class="fas fa-external-link-alt"></i> arXiv
-</a>
-</div>
-</div>
-
-<div class="paper-preview">
-<div class="paper-header">
-<h3>Underwater SONAR Image Classification using LIME-based XAI</h3>
-<span class="paper-year">2024</span>
-</div>
-<p class="paper-authors">Purushothaman Natarajan, Athira Nambiar</p>
-<p class="paper-stats">DRDO Validated | Military-Grade</p>
-<div class="paper-actions">
-<a href="https://arxiv.org/pdf/2408.12837" target="_blank" class="btn btn-small">
-<i class="fas fa-file-pdf"></i> View PDF
-</a>
-<a href="https://arxiv.org/abs/2408.12837" target="_blank" class="btn btn-small">
-<i class="fas fa-external-link-alt"></i> arXiv
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 <!-- About Section -->
 <section id="about" class="section about-section">
 <div class="container">
@@ -215,30 +135,34 @@
 <div class="about-stats">
 <div class="stat-item">
 <h4>5+</h4>
-<p>Years AI/ML</p>
+<p>Years Experience</p>
 </div>
 <div class="stat-item">
-<h4>17+</h4>
-<p>AIML Projects</p>
+<h4>15+</h4>
+<p>Enterprise Projects</p>
 </div>
 <div class="stat-item">
-<h4>3</h4>
+<h4>4</h4>
 <p>Publications</p>
 </div>
+<div class="stat-item">
+<h4>8+</h4>
+<p>Open Source Tools</p>
 </div>
 </div>
-
+</div>
 <div class="about-right">
-<h3>Applied AI Engineer & ML Researcher</h3>
+<h3>Applied AI Systems Engineer & ML Researcher</h3>
 <p>
-Architecting production-scale AI systems across GenAI, agentic architectures, computer vision, and document intelligence. 5+ years delivering scalable ML platforms that transform complex data and workflows into reliable enterprise solutions.
+I'm a <strong>Computer Vision and Generative AI</strong> specialist at <strong>Blackstraw AI</strong>, focusing on building production-grade AI systems. My work spans autonomous agents, document intelligence, and enterprise ML pipelines.
 </p>
 <p>
-Specialized in <strong>Large Language Models, RAG pipelines, multi-agent automation, multimodal AI, and explainable ML</strong>. Proven track record delivering scalable AI platforms that reduce manual effort, improve model reliability, and automate end-to-end workflows across vulnerability intelligence, document AI, and visual understanding systems.
+Previously at <strong>DRDO</strong>, I developed explainable AI systems for underwater sonar image classification, contributing to research published in international conferences. My research focuses on making AI systems interpretable and trustworthy.
 </p>
 <p>
-Currently at <strong>Blackstraw AI</strong>, I architect enterprise AI solutions. Previous experience includes Amazon ML systems, DRDO-sponsored research programs, and multiple peer-reviewed publications. Strong focus on translating research-driven models into deployable, monitored, and high-impact production systems.
+I architect end-to-end AI solutions from research prototypes to production deployment, specializing in LLM systems, computer vision, and document intelligence for enterprise applications.
 </p>
+</div>
 </div>
 </div>
 </section>
@@ -434,9 +358,11 @@ Currently at <strong>Blackstraw AI</strong>, I architect enterprise AI solutions
 <div class="container">
 <div class="section-header">
 <h2>Featured Projects</h2>
-<p class="section-subtitle">Enterprise-grade AI systems in production</p>
+<p class="section-subtitle">Production systems and open source contributions</p>
 <div class="header-line"></div>
 </div>
+<div id="enterprise-projects">
+<h3 class="subsection-title">Enterprise Solutions</h3>
 <div class="projects-container">
 
 <!-- Project 1 -->
@@ -564,13 +490,75 @@ Converted 3600+ item coding playbooks into hierarchical LLM workflows with DSPy 
 <span>Rule-based Validation</span>
 </div>
 </div>
+</div>
+</div>
 
-<!-- Project 8 -->
+<div id="open-source-projects">
+<h3 class="subsection-title">Open Source Projects</h3>
+<div class="projects-container">
+<!-- DL Studio -->
 <div class="project-card">
-<div class="project-tag">Open Source</div>
-<h3>Doctane — Modular OCR & Document AI Framework</h3>
+<div class="project-tag">ML Platform</div>
+<div class="project-content">
+<h3>DL-Studio</h3>
 <p>
-Open-source OCR/document-understanding stack with modular pipelines for extraction, preprocessing, and analysis.
+Unified AI Deep Learning Lab for regression analysis, automated data preprocessing, and competitive benchmarking with 14+ models including traditional ML and deep learning architectures.
+</p>
+<div class="project-tech">
+<span>React</span>
+<span>TypeScript</span>
+<span>FastAPI</span>
+<span>TensorFlow</span>
+<span>Scikit-Learn</span>
+<span>SHAP</span>
+<span>LIME</span>
+</div>
+<div class="project-links">
+<a href="https://purushothaman-natarajan.github.io/DL-Studio/" target="_blank" class="project-link">
+<i class="fas fa-desktop"></i> Live Demo
+</a>
+<a href="https://github.com/purushothaman-natarajan/DL-Studio" target="_blank" class="project-link">
+<i class="fab fa-github"></i> Code
+</a>
+</div>
+</div>
+</div>
+
+<!-- Exploit2Patch -->
+<div class="project-card">
+<div class="project-tag">Security AI</div>
+<div class="project-content">
+<h3>Exploit2Patch</h3>
+<p>
+AI-driven system that transforms CVE data into OS-specific remediation scripts using RAG and multi-agent orchestration for automated vulnerability intelligence.
+</p>
+<div class="project-tech">
+<span>Python</span>
+<span>LLM Agents</span>
+<span>RAG</span>
+<span>Vector DB</span>
+<span>Tool Calling</span>
+<span>Multi-Agent Orchestration</span>
+<span>Kubernetes</span>
+</div>
+<div class="project-links">
+<a href="https://purushothaman-natarajan.github.io/Exploit2Patch/" target="_blank" class="project-link">
+<i class="fas fa-desktop"></i> Live Demo
+</a>
+<a href="https://github.com/purushothaman-natarajan/Exploit2Patch" target="_blank" class="project-link">
+<i class="fab fa-github"></i> Code
+</a>
+</div>
+</div>
+</div>
+
+<!-- Doctane -->
+<div class="project-card">
+<div class="project-tag">Document AI</div>
+<div class="project-content">
+<h3>Doctane</h3>
+<p>
+Modular OCR & Document AI Framework with pipelines for extraction, preprocessing, and analysis of documents using transformer-based models.
 </p>
 <div class="project-tech">
 <span>Python</span>
@@ -579,52 +567,45 @@ Open-source OCR/document-understanding stack with modular pipelines for extracti
 <span>NLTK</span>
 <span>Streamlit</span>
 </div>
-<a href="https://github.com/Purushothaman-natarajan/doctane" target="_blank" class="btn-small">
+<div class="project-links">
+<a href="https://purushothaman-natarajan.github.io/doctane/" target="_blank" class="project-link">
+<i class="fas fa-desktop"></i> Live Demo
+</a>
+<a href="https://github.com/purushothaman-natarajan/doctane" target="_blank" class="project-link">
 <i class="fab fa-github"></i> Code
 </a>
 </div>
+</div>
+</div>
 
-<!-- Project 9 -->
+<!-- DocTailer -->
 <div class="project-card">
-<div class="project-tag">Research</div>
-<h3>Explainable Remote Sensing Vision Framework</h3>
+<div class="project-tag">Document Processing</div>
+<div class="project-content">
+<h3>DocTailer</h3>
 <p>
-Transfer-learning scene classifier with LIME + Grad-CAM explainability for remote sensing imagery.
+Enterprise Document Intelligence Platform for OCR receipts processing with FFT-former deblurring and SwinIR/BSRGAN super-resolution for enhanced accuracy.
 </p>
 <div class="project-tech">
-<span>Python</span>
-<span>TensorFlow</span>
-<span>LIME</span>
-<span>Grad-CAM</span>
-<span>Gradio</span>
+<span>OCR</span>
+<span>SwinIR</span>
+<span>BSRGAN</span>
+<span>FFT-former</span>
+<span>NLP</span>
+<span>Data Post-processing</span>
 </div>
-<a href="https://github.com/Purushothaman-natarajan/eXplainable-AI-for-Image-Classification-on-Remote-Sensing" target="_blank" class="btn-small">
+<div class="project-links">
+<a href="https://purushothaman-natarajan.github.io/DocTailer/" target="_blank" class="project-link">
+<i class="fas fa-desktop"></i> Live Demo
+</a>
+<a href="https://github.com/purushothaman-natarajan/DocTailer" target="_blank" class="project-link">
 <i class="fab fa-github"></i> Code
 </a>
 </div>
-
-<!-- Project 10 -->
-<div class="project-card">
-<div class="project-tag">Side Project</div>
-<h3>Q&A Chatbot from PDF on Edge</h3>
-<p>
-Cloud Agnostic Chatbot for answering queries from PDFs using local models.
-</p>
-<div class="project-tech">
-<span>Python</span>
-<span>Transformers</span>
-<span>NLTK</span>
-<span>Gradio</span>
-<span>TensorFlow</span>
-<span>Ollama</span>
-<span>Qwen</span>
-<span>Local LLMs</span>
 </div>
-<a href="https://github.com/Purushothaman-natarajan/Q-and-A-chat-bot-from-PDF" target="_blank" class="btn-small">
-<i class="fab fa-github"></i> Code
-</a>
 </div>
-
+</div>
+</div>
 </div>
 </section>
 
@@ -632,10 +613,13 @@ Cloud Agnostic Chatbot for answering queries from PDFs using local models.
 <section id="publications" class="section publications-section">
 <div class="container">
 <div class="section-header">
-<h2>Publications & Research</h2>
-<p class="section-subtitle">Peer-reviewed work in AI, XAI, and synthetic data</p>
+<h2>Research Publications</h2>
+<p class="section-subtitle">Peer-reviewed work and interactive research demos</p>
 <div class="header-line"></div>
 </div>
+
+<div id="papers">
+<h3 class="subsection-title">Published Papers</h3>
 <div class="publications-grid">
 
 <div class="publication-card">
@@ -655,6 +639,9 @@ Dual diffusion models + GPT prompting for high-quality sonar image generation, e
 <a href="https://arxiv.org/pdf/2410.08612" target="_blank"><i class="fas fa-file-pdf"></i> arXiv PDF</a>
 <a href="https://arxiv.org/abs/2410.08612" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv Abstract</a>
 <a href="https://github.com/Purushothaman-natarajan/Synth-SONAR" target="_blank"><i class="fab fa-github"></i> Code</a>
+<a href="https://purushothaman-natarajan.github.io/Synth-SONAR/" target="_blank" class="project-link">
+<i class="fas fa-desktop"></i> Demo
+</a>
 </div>
 </div>
 
@@ -675,6 +662,9 @@ Integration of SHAP, Segment Anything Model, and Vision Language Models for huma
 <a href="https://arxiv.org/pdf/2408.12808" target="_blank"><i class="fas fa-file-pdf"></i> arXiv PDF</a>
 <a href="https://arxiv.org/abs/2408.12808" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv Abstract</a>
 <a href="https://github.com/Purushothaman-natarajan/VALE-Explainer" target="_blank"><i class="fab fa-github"></i> Code</a>
+<a href="https://purushothaman-natarajan.github.io/VALE-Explainer/" target="_blank" class="project-link">
+<i class="fas fa-desktop"></i> Demo
+</a>
 </div>
 </div>
 
@@ -695,11 +685,15 @@ Explainable AI techniques for underwater classification across Seabed Objects, o
 <a href="https://arxiv.org/pdf/2408.12837" target="_blank"><i class="fas fa-file-pdf"></i> arXiv PDF</a>
 <a href="https://arxiv.org/abs/2408.12837" target="_blank"><i class="fas fa-external-link-alt"></i> arXiv Abstract</a>
 <a href="https://github.com/Purushothaman-natarajan/Under-water-sonar-image-classification" target="_blank"><i class="fab fa-github"></i> Code</a>
+<a href="https://purushothaman-natarajan.github.io/Under-water-sonar-image-classification/" target="_blank" class="project-link">
+<i class="fas fa-desktop"></i> Demo
+</a>
+</div>
+</div>
 </div>
 </div>
 
-</div>
-</section>
+
 
 <!-- Skills Section -->
 <section id="skills" class="section skills-section">
