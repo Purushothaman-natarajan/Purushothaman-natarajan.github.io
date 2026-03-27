@@ -294,6 +294,14 @@ body {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    padding: 10px;
+    margin: -10px;
+    gap: 7px;
+  }
+
+  .hamburger span {
+    width: 28px;
+    height: 3px;
   }
 
   .nav-menu {
@@ -302,12 +310,14 @@ body {
     top: var(--navbar-height);
     left: 0;
     width: 100%;
+    height: calc(100vh - var(--navbar-height));
     flex-direction: column;
     gap: 0;
-    background: rgba(10, 14, 39, 0.98);
-    padding: 20px;
+    background: #ffffff;
+    padding: 20px 0;
     border-bottom: 1px solid var(--border-color);
     z-index: 999;
+    overflow-y: auto;
   }
 
   .nav-menu.show {
@@ -315,8 +325,15 @@ body {
   }
 
   .nav-link {
-    padding: 12px 0;
+    padding: 18px 24px;
     border-bottom: 1px solid var(--border-color);
+    font-size: 16px;
+    color: var(--text-primary);
+  }
+
+  .nav-link:hover {
+    background: rgba(37, 99, 235, 0.05);
+    color: var(--accent);
   }
 
   .quick-actions {
@@ -2787,7 +2804,6 @@ i,
     font-size: 11px;
     padding: 4px 8px;
   }
-  }
 
   .about-img {
     max-width: 280px;
@@ -2799,6 +2815,24 @@ i,
 
   .pub-header {
     flex-direction: column;
+  }
+
+  .publication-card {
+    padding: 20px;
+  }
+
+  .pub-header h3 {
+    font-size: 16px;
+  }
+
+  .pub-actions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pub-actions a {
+    font-size: 12px;
+    padding: 8px 12px;
   }
 
   .modal-content {
