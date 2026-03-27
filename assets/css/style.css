@@ -2751,6 +2751,44 @@ i,
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .projects-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-card.large {
+    grid-column: span 1 !important;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-tag {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .project-card p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .project-tech {
+    justify-content: center;
+  }
+
+  .project-tech span {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  }
+
   .about-img {
     max-width: 280px;
   }
