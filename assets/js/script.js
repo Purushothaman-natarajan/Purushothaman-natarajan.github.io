@@ -5,21 +5,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 40);
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
+  const navBackdrop = document.querySelector('.nav-backdrop');
   const navLinks = document.querySelectorAll('.nav-link');
+
+  const closeMenu = () => {
+    navMenu?.classList.remove('show');
+    navBackdrop?.classList.remove('show');
+    hamburger?.classList.remove('active');
+  };
+
+  const openMenu = () => {
+    navMenu?.classList.add('show');
+    navBackdrop?.classList.add('show');
+    hamburger?.classList.add('active');
+  };
 
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-      hamburger.classList.toggle('active');
+      if (navMenu.classList.contains('show')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeMenu);
   }
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
-      navMenu?.classList.remove('show');
-      hamburger?.classList.remove('active');
+      closeMenu();
     });
   });
 
