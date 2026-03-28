@@ -2729,7 +2729,7 @@ i,
   }
 
   .hamburger {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     width: 44px;
@@ -2740,6 +2740,8 @@ i,
     border: none;
     cursor: pointer;
     flex-shrink: 0;
+    z-index: 1001;
+    position: relative;
   }
 
   .hamburger:focus {
