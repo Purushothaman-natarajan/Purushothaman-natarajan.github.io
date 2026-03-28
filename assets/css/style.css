@@ -2817,7 +2817,6 @@ i,
     background: #f1f5f9;
     color: var(--accent);
   }
-  }
 
   .hero {
     margin-top: 0;
@@ -2877,29 +2876,38 @@ i,
   .pub-header {
     flex-direction: column;
     gap: 10px;
+    text-align: center;
   }
 
   .pub-year {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .publication-card {
     padding: 20px;
+    text-align: center;
   }
 
   .pub-header h3 {
     font-size: 16px;
     line-height: 1.4;
+    text-align: center;
+  }
+
+  .pub-authors {
+    text-align: center;
   }
 
   .pub-abstract {
     font-size: 13px;
     line-height: 1.6;
+    text-align: center;
   }
 
   .pub-stats {
     flex-wrap: wrap;
     gap: 8px;
+    justify-content: center;
   }
 
   .pub-stats span {
