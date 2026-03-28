@@ -2804,7 +2804,7 @@ i,
 
   .hero {
     margin-top: 0;
-    padding: 56px 0 0;
+    padding: 0;
     align-items: flex-start;
   }
 
@@ -2979,6 +2979,7 @@ i,
 
   .hero-grid {
     gap: 30px;
+    padding-top: 56px;
   }
 
   .hero-stats {
