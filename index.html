@@ -6,7 +6,7 @@
 <meta name="description" content="Portfolio of AI Research Engineer Purushothaman Natarajan focusing on computer vision, generative AI, diffusion models, and explainable AI systems.">
 <title>Purushothaman Natarajan | AI Research Engineer | Computer Vision & Generative AI</title>
 <link rel="stylesheet" href="assets/css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WWJ1CZSL6"></script>
 <script>
@@ -34,14 +34,14 @@
 <span class="logo-title">Purushothaman Natarajan</span>
 </div>
 <ul class="nav-menu">
-<li><a href="#home" class="nav-link active">Home</a></li>
-<li><a href="#about" class="nav-link">About</a></li>
-<li><a href="#experience" class="nav-link">Experience</a></li>
-<li><a href="#education" class="nav-link">Education</a></li>
-<li><a href="#projects" class="nav-link">Projects</a></li>
-<li><a href="#publications" class="nav-link">Publications</a></li>
-<li><a href="#skills" class="nav-link">Skills</a></li>
-<li><a href="#contact" class="nav-link">Contact</a></li>
+  <li><a href="#home" class="nav-link active">Home</a></li>
+  <li><a href="#about" class="nav-link">About</a></li>
+  <li><a href="#experience" class="nav-link">Experience</a></li>
+  <li><a href="#projects" class="nav-link">Projects</a></li>
+  <li><a href="#publications" class="nav-link">Publications</a></li>
+  <li><a href="#skills" class="nav-link">Skills</a></li>
+  <li><a href="assets/files/Purushothaman_Natarajan_CV.pdf" target="_blank" class="nav-link">Resume</a></li>
+  <li><a href="#contact" class="nav-link">Contact</a></li>
 </ul>
 <div class="quick-actions">
   <button class="quick-btn" id="resumeBtn" title="View Resume">
@@ -60,9 +60,30 @@
     <i class="fas fa-user-graduate"></i>
   </a>
 </div>
-<button class="hamburger" aria-label="Menu">☰</button>
+<div class="header-social-links">
+  <a href="https://github.com/Purushothaman-natarajan" target="_blank" rel="noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://linkedin.com/in/purushothamann" target="_blank" rel="noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  <a href="https://twitter.com" target="_blank" rel="noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="https://scholar.google.com/citations?user=eeGeW84AAAAJ&hl=en" target="_blank" rel="noreferrer" title="Scholar"><i class="fas fa-graduation-cap"></i></a>
+</div>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+  <span class="moon-icon">&#9790;</span>
+  <span class="sun-icon">&#9728;&#65039;</span>
+</button>
+<button class="hamburger" aria-label="Menu">&#9776;</button>
 <div class="nav-backdrop"></div>
 </nav>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="loader-logo">PN.</div>
+    <div class="loader-spinner"></div>
+  </div>
+</div>
+
+<!-- Back to Top -->
+<a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
@@ -74,6 +95,9 @@
       <p class="hero-subtitle">
         Architecting production-scale AI systems across GenAI, agentic architectures, computer vision, and document intelligence.
       </p>
+      <a class="typewrite" data-period="2000" data-type='[ "AI Research Engineer", "Machine Learning Expert", "Computer Vision Specialist", "LLM Systems Architect", "Generative AI Developer" ]'>
+        <span class="wrap"></span>
+      </a>
       <ul class="hero-list">
         <li>Autonomous AI agents</li>
         <li>Production GenAI systems</li>
@@ -800,33 +824,117 @@ Explainable AI techniques for underwater classification across Seabed Objects, o
 </div>
 
 <div class="skill-group">
-<h4><i class="fas fa-server"></i> Cloud & MLOps</h4>
-<div class="skill-items">
-<div class="skill-item">Azure</div>
-<div class="skill-item">GCP</div>
-<div class="skill-item">AWS</div>
-<div class="skill-item">Docker</div>
-<div class="skill-item">Kubernetes</div>
-<div class="skill-item">FastAPI</div>
-<div class="skill-item">CI/CD</div>
-<div class="skill-item">Model Deployment</div>
-</div>
-</div>
-
-<div class="skill-group">
-<h4><i class="fas fa-code"></i> Programming Languages</h4>
-<div class="skill-items">
-<div class="skill-item">Python</div>
-<div class="skill-item">SQL</div>
-<div class="skill-item">C++ (Basics)</div>
-<div class="skill-item">JavaScript</div>
-<div class="skill-item">Bash</div>
-<div class="skill-item">Git</div>
-<div class="skill-item">Linux</div>
-<div class="skill-item">CUDA</div>
-</div>
+  <h4><i class="fas fa-server"></i> Cloud & MLOps</h4>
+  <div class="skill-items">
+  <div class="skill-item">Azure</div>
+  <div class="skill-item">GCP</div>
+  <div class="skill-item">AWS</div>
+  <div class="skill-item">Docker</div>
+  <div class="skill-item">Kubernetes</div>
+  <div class="skill-item">FastAPI</div>
+  <div class="skill-item">CI/CD</div>
+  <div class="skill-item">Model Deployment</div>
+  </div>
 </div>
 
+</div>
+</section>
+
+<!-- Facts / Counters Section -->
+<section id="facts" class="section facts-section">
+<div class="container">
+<div class="section-header">
+<h2>Impact & Achievements</h2>
+<div class="header-line"></div>
+</div>
+<div class="facts-grid">
+<div class="counter-box" data-aos="fade-up" data-aos-delay="100">
+  <i class="fas fa-project-diagram"></i>
+  <h3 class="counter-number" data-target="15">0</h3>
+  <p class="counter-label">Production Projects</p>
+</div>
+<div class="counter-box" data-aos="fade-up" data-aos-delay="200">
+  <i class="fas fa-graduation-cap"></i>
+  <h3 class="counter-number" data-target="3">0</h3>
+  <p class="counter-label"><a href="#publications">Research Papers</a></p>
+</div>
+<div class="counter-box" data-aos="fade-up" data-aos-delay="300">
+  <i class="fas fa-certificate"></i>
+  <h3 class="counter-number" data-target="12">0</h3>
+  <p class="counter-label"><a href="#certifications">Certifications</a></p>
+</div>
+<div class="counter-box" data-aos="fade-up" data-aos-delay="400">
+  <i class="fas fa-award"></i>
+  <h3 class="counter-number" data-target="3">0</h3>
+  <p class="counter-label"><a href="#additional">Awards</a></p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Skills Progress Bars -->
+<section id="skill-progress" class="section skills-progress-section">
+<div class="container">
+<div class="section-header">
+<h2>Core Competencies</h2>
+<div class="header-line"></div>
+</div>
+<div class="skills-progress" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+<div class="skill-progress" data-aos="fade-up">
+  <div class="skill-header">
+    <span class="skill-name">Python & AI/ML</span>
+    <span class="skill-percent">95%</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" role="progressbar" aria-valuenow="95" style="width: 0%"></div>
+  </div>
+</div>
+<div class="skill-progress" data-aos="fade-up" data-aos-delay="100">
+  <div class="skill-header">
+    <span class="skill-name">LLM & Agentic AI Systems</span>
+    <span class="skill-percent">90%</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" role="progressbar" aria-valuenow="90" style="width: 0%"></div>
+  </div>
+</div>
+<div class="skill-progress" data-aos="fade-up" data-aos-delay="200">
+  <div class="skill-header">
+    <span class="skill-name">Computer Vision & OCR</span>
+    <span class="skill-percent">92%</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" role="progressbar" aria-valuenow="92" style="width: 0%"></div>
+  </div>
+</div>
+<div class="skill-progress" data-aos="fade-up" data-aos-delay="300">
+  <div class="skill-header">
+    <span class="skill-name">RAG & Vector Databases</span>
+    <span class="skill-percent">88%</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" role="progressbar" aria-valuenow="88" style="width: 0%"></div>
+  </div>
+</div>
+<div class="skill-progress" data-aos="fade-up" data-aos-delay="400">
+  <div class="skill-header">
+    <span class="skill-name">Cloud & MLOps</span>
+    <span class="skill-percent">85%</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" role="progressbar" aria-valuenow="85" style="width: 0%"></div>
+  </div>
+</div>
+<div class="skill-progress" data-aos="fade-up" data-aos-delay="500">
+  <div class="skill-header">
+    <span class="skill-name">Research & Publications</span>
+    <span class="skill-percent">80%</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" role="progressbar" aria-valuenow="80" style="width: 0%"></div>
+  </div>
+</div>
+</div>
 </div>
 </section>
 
