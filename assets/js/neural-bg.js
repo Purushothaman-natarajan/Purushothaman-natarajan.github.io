@@ -13,12 +13,12 @@
   const connectionDistance = 130;
   const mouseDistance = 150;
   
-  // Colors adapt to theme - vibrant, playful, visible on each mode
+  // Colors adapt to theme - vibrant & complementary for each mode
   const getColors = () => {
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     return isLight 
-      ? ['#0891b2', '#7c3aed', '#2563eb', '#0d9488', '#8b5cf6']  // Light mode: teal, purple, blue, emerald, violet - more visible
-      : ['#00d4ff', '#a78bfa', '#f472b6', '#fbbf24', '#818cf8']; // Dark mode: cyan, lavender, pink, amber, indigo
+      ? ['#0d9488', '#f97316', '#6366f1', '#14b8a6', '#ec4899', '#06b6d4']  // Light mode: teal, orange, indigo, emerald, pink, cyan - warm & fresh
+      : ['#00d4ff', '#a78bfa', '#f472b6', '#fbbf24', '#818cf8', '#c084fc']; // Dark mode: cyan, lavender, pink, amber, indigo, purple
   };
   
   // Reset particles when theme changes

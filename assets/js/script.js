@@ -20,36 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
   
-  // Update icon based on theme - playful bounce
-  const updateThemeIcon = (animate = false) => {
+  // Update icon based on theme
+  const updateThemeIcon = () => {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     const icon = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     themeBtns.forEach(btn => {
-      if (btn) {
-        btn.innerHTML = icon;
-        if (animate) {
-          btn.style.transform = 'scale(0.5) rotate(-180deg)';
-          btn.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-          setTimeout(() => {
-            btn.style.transform = 'scale(1.2) rotate(0deg)';
-            setTimeout(() => {
-              btn.style.transform = 'scale(1) rotate(0deg)';
-              btn.style.transition = 'all 0.2s ease';
-            }, 150);
-          }, 150);
-        }
-      }
+      if (btn) btn.innerHTML = icon;
     });
   };
   updateThemeIcon();
 
+  // Add click handler with smooth CSS transition
   themeBtns.forEach(btn => {
-    btn?.addEventListener('click', () => {
+    btn?.addEventListener('click', function() {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      updateThemeIcon(true);
+      updateThemeIcon();
     });
   });
 
@@ -306,4 +294,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== TOUCH IMPROVEMENTS =====
   // Remove 300ms tap delay on mobile
   document.addEventListener('touchstart', () => {}, { passive: true });
+  
+  // ===== SMOOTH SCROLL =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // ===== SCROLL REVEAL ANIMATION =====
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  document.querySelectorAll('.section').forEach(section => {
+    section.classList.add('reveal');
+    observer.observe(section);
+  });
 });
