@@ -299,21 +299,24 @@ ul, ol {
 }
 
 .nav-menu.active {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 /* Show nav as row only on desktop (>768px) */
 @media (min-width: 769px) {
   .nav-menu {
     position: static;
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     align-items: center;
     gap: 4px;
     background: none;
     padding: 0;
+    overflow: visible;
+  }
+}
     overflow: visible;
   }
 }
@@ -414,7 +417,7 @@ ul, ol {
 
 /* nav-actions: show ONLY on mobile (< 769px) */
 .nav-actions {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 8px;
 }
