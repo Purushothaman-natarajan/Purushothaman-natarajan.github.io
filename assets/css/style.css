@@ -295,7 +295,7 @@ ul, ol {
   background: var(--secondary);
   padding: 20px;
   overflow-y: auto;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .nav-menu.active {
@@ -304,7 +304,8 @@ ul, ol {
   gap: 8px;
 }
 
-@media (min-width: 768px) {
+/* Show nav as row only on desktop (>768px) */
+@media (min-width: 769px) {
   .nav-menu {
     position: static;
     display: flex;
@@ -313,6 +314,9 @@ ul, ol {
     gap: 4px;
     background: none;
     padding: 0;
+    overflow: visible;
+  }
+}
     overflow: visible;
   }
   
@@ -408,14 +412,14 @@ ul, ol {
   border-color: var(--accent);
 }
 
-/* nav-actions: show ONLY on mobile (< 768px) */
+/* nav-actions: show ONLY on mobile (< 769px) */
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .nav-actions {
     display: none !important;
   }
@@ -798,6 +802,7 @@ ul, ol {
   gap: 32px;
   position: relative;
   z-index: 1;
+  padding: 0 20px;
 }
 
 .hero-title {
@@ -805,6 +810,7 @@ ul, ol {
   font-size: clamp(28px, 6vw, 44px);
   font-weight: 900;
   line-height: 1.2;
+  text-align: center;
   color: var(--text-primary);
   margin: 0 0 16px 0;
 }
