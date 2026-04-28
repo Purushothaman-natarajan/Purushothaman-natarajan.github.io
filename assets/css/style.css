@@ -235,7 +235,7 @@ ul, ol {
   z-index: 1000;
   padding: 0 16px;
   height: var(--navbar-height);
-  background: rgba(10, 10, 15, 0.92);
+  background: var(--primary) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
@@ -428,6 +428,18 @@ ul, ol {
   }
 }
 
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.nav-backdrop.active {
+  display: block;
+}
+
 /* Mobile menu backdrop */
 .nav-backdrop {
   display: none;
@@ -568,10 +580,12 @@ ul, ol {
   border-color: var(--accent);
 }
 
-/* Show menu button only on mobile (< 768px) */
-@media (min-width: 768px) {
+/* Show menu button only on mobile (< 769px) */
+@media (min-width: 769px) {
   .menu-btn {
     display: none;
+  }
+}
   }
 }
   .menu-btn, .nav-backdrop {
@@ -829,7 +843,10 @@ ul, ol {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
+  .hero-title {
+    text-align: left;
+  }
   .hero-break {
     display: inline;
   }
@@ -1754,6 +1771,12 @@ ul, ol {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-item {
