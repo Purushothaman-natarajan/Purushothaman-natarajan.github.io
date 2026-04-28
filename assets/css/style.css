@@ -853,23 +853,31 @@ ul, ol {
 .cursor {
   display: inline-block;
   width: 2px;
-  height: 1em;
+  height: 1.2em;
   background: var(--accent);
-  margin-left: 2px;
-  animation: blink 1s infinite;
+  animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* HERO LIST */
 .hero-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 10px;
   margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle,
+  .hero-list {
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .hero-list li {
