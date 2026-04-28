@@ -814,18 +814,18 @@ ul, ol {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   gap: 32px;
   position: relative;
   z-index: 1;
   padding: 0 20px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .hero-container {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
@@ -857,6 +857,13 @@ ul, ol {
   font-size: clamp(14px, 2.5vw, 16px);
   line-height: 1.7;
   margin: 0 0 12px 0;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .hero-subtitle {
+    text-align: left;
+  }
 }
 
 .typewrite {
@@ -889,12 +896,13 @@ ul, ol {
   margin-bottom: 24px;
 }
 
-@media (max-width: 768px) {
-  .hero-subtitle,
-  .hero-list {
-    text-align: center;
-    justify-content: center;
-  }
+.hero-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .hero-list li {
@@ -904,6 +912,13 @@ ul, ol {
   border-radius: 8px;
   font-size: 13px;
   color: var(--text-secondary);
+}
+
+@media (min-width: 769px) {
+  .hero-list {
+    justify-content: flex-start;
+    text-align: left;
+  }
 }
 
 /* HERO BUTTONS - grouped in one row */
