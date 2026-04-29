@@ -320,7 +320,7 @@ ul, ol {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--primary);
+    background: var(--secondary);
     padding: 0;
     overflow-y: auto;
     z-index: 1001;
@@ -336,23 +336,27 @@ ul, ol {
   }
 
   .nav-menu li a {
-    display: flex;
-    align-items: center;
-    padding: 14px 20px;
-    font-size: 15px;
+    display: block;
+    padding: 12px 20px;
+    font-size: 14px;
     font-weight: 500;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     text-decoration: none;
     border-bottom: 1px solid var(--border-color);
     transition: all 0.2s ease;
-    background: transparent;
+    font-family: 'Poppins', sans-serif;
   }
 
   .nav-menu li a:hover,
   .nav-menu li a.active {
-    background: var(--glass);
     color: var(--accent);
+    background: var(--glass);
     padding-left: 24px;
+  }
+
+  .nav-menu li a.active {
+    color: var(--accent);
+    border-left: 3px solid var(--accent);
   }
 }
 
@@ -525,11 +529,9 @@ ul, ol {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
-  z-index: 1002;
+  gap: 8px;
 }
 
-/* HIDE nav-actions on desktop */
 @media (min-width: 769px) {
   .nav-actions {
     display: none;
@@ -539,15 +541,18 @@ ul, ol {
 /* Menu button - only visible on mobile */
 .menu-btn {
   display: flex;
-  height: 36px;
-  padding: 0 14px;
-  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 6px;
   border: 1px solid var(--border-color);
   background: var(--glass);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }
 
 .menu-btn:hover {
