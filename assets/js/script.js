@@ -47,16 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const navBackdrop = document.querySelector('.nav-backdrop');
 
   const closeMenu = () => {
+    if (navMenu) {
+      navMenu.style.animation = 'none';
+      navMenu.offsetHeight; /* trigger reflow */
+      navMenu.style.animation = '';
+    }
     navMenu?.classList.remove('active');
     navBackdrop?.classList.remove('active');
     menuBtn?.setAttribute('aria-expanded', 'false');
+    menuBtn && (menuBtn.textContent = 'Menu');
     document.body.style.overflow = '';
+
+    /* Reset menu item animations */
+    if (navMenu) {
+      navMenu.querySelectorAll('li').forEach(li => {
+        li.style.animation = 'none';
+        li.offsetHeight;
+        li.style.animation = '';
+      });
+    }
   };
 
   const openMenu = () => {
     navMenu?.classList.add('active');
     navBackdrop?.classList.add('active');
     menuBtn?.setAttribute('aria-expanded', 'true');
+    menuBtn && (menuBtn.textContent = 'Close');
     document.body.style.overflow = 'hidden';
   };
 
@@ -68,7 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  navBackdrop?.addEventListener('click', closeMenu);
+  navBackdrop?.addEventListener('click', (e) => {
+    if (e.target === navBackdrop) {
+      closeMenu();
+    }
+  });
 
   // Close menu on nav link click (mobile)
   document.querySelectorAll('.nav-menu a').forEach(link => {

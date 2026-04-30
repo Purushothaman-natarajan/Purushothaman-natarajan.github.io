@@ -480,35 +480,46 @@ ul, ol {
 
 /* Mobile menu backdrop */
 .nav-backdrop {
+  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
   z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: all var(--transition-normal);
 }
 
 .nav-backdrop.active {
-  opacity: 1;
-  visibility: visible;
+  display: block;
+  animation: fadeIn 0.2s ease forwards;
 }
 
 /* Theme buttons */
 .theme-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  border: 2px solid var(--border-color);
-  background: var(--glass);
-  color: var(--accent);
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--glass);
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
   transition: all 0.2s ease;
+}
+
+@media (min-width: 769px) {
+  .theme-btn {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    font-size: 18px;
+  }
 }
 
 .theme-btn:hover {
