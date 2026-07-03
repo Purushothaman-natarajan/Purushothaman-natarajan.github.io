@@ -1677,6 +1677,7 @@ ul, ol {
 }
 
 .progress-bar {
+  display: block;
   height: 100%;
   background: var(--gradient-1);
   border-radius: 4px;
