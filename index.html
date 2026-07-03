@@ -834,6 +834,163 @@
       letter-spacing: 0.02em;
     }
 
+    /* Secondary PhD/research line in terminal card */
+    .t-status-secondary {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--text-dimmer);
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: color .2s ease;
+    }
+    .t-status-secondary:hover {
+      color: var(--accent-soft);
+    }
+    .t-status-secondary::before {
+      content: '↗';
+      font-size: 0.62rem;
+      color: var(--accent-soft);
+      opacity: 0.7;
+    }
+
+    /* Publications research callout banner */
+    .pub-callout {
+      background: var(--accent-bg);
+      border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .pub-callout-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      margin-top: 5px;
+      animation: pulse 2s infinite;
+    }
+    .pub-callout-body {
+      flex: 1;
+    }
+    .pub-callout-title {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .pub-callout-text {
+      font-family: var(--body);
+      font-size: 0.84rem;
+      color: var(--text-dim);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+    .pub-callout-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .pub-callout-chip {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--accent-soft);
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .pub-callout-btn {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 9px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background .2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+    .pub-callout-btn:hover {
+      background: var(--accent-soft);
+    }
+
+    /* About section — full-width research strip below both cards */
+    .about-research-strip {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--bg-elevated);
+      flex-wrap: wrap;
+    }
+
+    .about-research-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .about-research-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      opacity: 0.7;
+      animation: pulse 2.5s infinite;
+    }
+
+    .about-research-text {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    .about-research-links {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .about-research-link {
+      font-family: var(--mono);
+      font-size: 0.71rem;
+      font-weight: 500;
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 13px;
+      cursor: pointer;
+      transition: color .2s ease, border-color .2s ease;
+      background: transparent;
+    }
+
+    .about-research-link:hover {
+      color: var(--accent-soft);
+      border-color: var(--accent-soft);
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(16px);
@@ -2469,6 +2626,9 @@
               <div class="t-status-dot"></div>
               Open to Senior / Lead AI Engineer roles
             </div>
+            <div class="t-status-secondary" id="heroPhDLink" onclick="if(typeof activateTab==='function')activateTab('publications');" title="Jump to Publications">
+              Also open to part-time PhD &amp; research collaborations
+            </div>
           </div>
 
         </div>
@@ -2508,6 +2668,16 @@
           </div>
           <div class="fact"><span class="k">Elsewhere</span><span class="v">GitHub · LinkedIn · Google Scholar</span>
           </div>
+        </div>
+      </div>
+      <div class="about-research-strip">
+        <div class="about-research-left">
+          <div class="about-research-dot"></div>
+          <span class="about-research-text">Also open to part-time PhD positions &amp; research collaborations — continuing the XAI &amp; computer vision trajectory alongside industry work.</span>
+        </div>
+        <div class="about-research-links">
+          <span class="about-research-link" onclick="if(typeof activateTab==='function')activateTab('publications');">Publications &rarr;</span>
+          <span class="about-research-link" onclick="if(typeof activateTab==='function')activateTab('contact');">Contact &rarr;</span>
         </div>
       </div>
     </div>
@@ -2581,6 +2751,25 @@
       <div class="section-eyebrow">06 — Research</div>
       <h2 class="section-title">Publications</h2>
       <p class="section-sub">Peer-reviewed work and interactive research demos</p>
+    </div>
+    <div class="pub-callout reveal">
+      <div class="pub-callout-dot"></div>
+      <div class="pub-callout-body">
+        <div class="pub-callout-title">Open to research collaborations</div>
+        <div class="pub-callout-text">
+          My research spans explainable AI, computer vision, and agentic systems — I'm actively open to
+          part-time PhD positions, co-authorship, or advisor-led work that pushes these areas forward.
+          If your lab or project aligns, I'd love to connect.
+        </div>
+        <div class="pub-callout-chips">
+          <span class="pub-callout-chip">Explainable AI</span>
+          <span class="pub-callout-chip">Computer Vision</span>
+          <span class="pub-callout-chip">Agentic Systems</span>
+          <span class="pub-callout-chip">Multimodal AI</span>
+          <span class="pub-callout-chip">Sonar / Defense AI</span>
+        </div>
+        <a class="pub-callout-btn" onclick="if(typeof activateTab==='function')activateTab('contact');" href="#contact">Get in touch &rarr;</a>
+      </div>
     </div>
     <div class="pub-list reveal" id="pubList"></div>
   </section>
