@@ -233,6 +233,20 @@
       height: 2px;
       background: var(--text);
       border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Morph hamburger to X when active */
+    .burger.active span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .burger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
     }
 
     /* SIDE DOT NAV */
@@ -2966,19 +2980,20 @@
       });
       skillBarsEl.appendChild(div);
     });
-    // animate bar fills in as the section scrolls into view
-    if (window.IntersectionObserver && skillBarsEl) {
+    // animate bar fills in as each row scrolls into view
+    if (window.IntersectionObserver) {
       const skillFillObs = new IntersectionObserver((entries) => {
         entries.forEach(en => {
           if (en.isIntersecting) {
-            en.target.querySelectorAll('.skill-row-fill').forEach(f => { f.style.width = f.dataset.pct + '%'; });
+            en.target.style.width = en.target.dataset.pct + '%';
             skillFillObs.unobserve(en.target);
           }
         });
-      }, { threshold: 0.2 });
-      skillFillObs.observe(skillBarsEl);
-    } else if (skillBarsEl) {
-      skillBarsEl.querySelectorAll('.skill-row-fill').forEach(f => { f.style.width = f.dataset.pct + '%'; });
+      }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+      
+      document.querySelectorAll('.skill-row-fill').forEach(f => skillFillObs.observe(f));
+    } else {
+      document.querySelectorAll('.skill-row-fill').forEach(f => { f.style.width = f.dataset.pct + '%'; });
     }
 
     function goToProject(title) {
@@ -3462,9 +3477,31 @@
     /* ---------- MOBILE NAV & CONTACT FORM ---------- */
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
-    burger.addEventListener('click', () => {
-      const open = navLinks.style.display === 'flex';
-      navLinks.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:fixed;top:60px;right:20px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:12px;padding:12px;gap:2px;box-shadow:var(--shadow);';
+    
+    burger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = burger.classList.toggle('active');
+      navLinks.style.cssText = open 
+        ? 'display:flex;flex-direction:column;position:fixed;top:65px;right:20px;background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:12px;padding:12px;gap:2px;box-shadow:var(--shadow-lg);z-index:999;' 
+        : '';
+    });
+
+    // Close mobile nav when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 1000) {
+          burger.classList.remove('active');
+          navLinks.style.cssText = '';
+        }
+      });
+    });
+
+    // Close mobile nav when clicking outside
+    document.addEventListener('click', (e) => {
+      if (burger.classList.contains('active') && !burger.contains(e.target) && !navLinks.contains(e.target)) {
+        burger.classList.remove('active');
+        navLinks.style.cssText = '';
+      }
     });
 
     /* ---------- CONTACT FORM SUBMISSION ---------- */
