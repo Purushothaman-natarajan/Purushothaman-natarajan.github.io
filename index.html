@@ -31,22 +31,24 @@
       --mono: 'JetBrains Mono', monospace;
       --tech: 'Space Grotesk', sans-serif;
       --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.35);
       color-scheme: dark;
     }
 
     html[data-theme="light"] {
-      --bg: #ffffff;
-      --bg-elevated: #f7f7f8;
-      --bg-elevated-2: #f0f0f2;
-      --border: rgba(0, 0, 0, 0.08);
-      --border-strong: rgba(0, 0, 0, 0.16);
-      --text: #0c0c0d;
-      --text-dim: #5b5b64;
-      --text-dimmer: #8d8d96;
-      --accent: #5b5ff0;
-      --accent-soft: #4c4fe0;
-      --accent-bg: rgba(91, 95, 240, 0.08);
-      --shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+      --bg: #f8fafc;
+      --bg-elevated: #ffffff;
+      --bg-elevated-2: #edf2f7;
+      --border: rgba(15, 23, 42, 0.06);
+      --border-strong: rgba(15, 23, 42, 0.12);
+      --text: #0f172a;
+      --text-dim: #475569;
+      --text-dimmer: #64748b;
+      --accent: #4f46e5;
+      --accent-soft: #6366f1;
+      --accent-bg: rgba(79, 70, 229, 0.06);
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+      --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.06);
       color-scheme: light;
     }
 
@@ -95,6 +97,13 @@
       background: radial-gradient(circle, var(--accent-bg), transparent 70%);
       opacity: 0.7;
       filter: blur(20px);
+    }
+
+    [data-theme="light"] .ambient {
+      background: radial-gradient(circle at 70% 30%, rgba(99, 102, 241, 0.12), transparent 60%),
+                  radial-gradient(circle at 30% 70%, rgba(244, 63, 94, 0.08), transparent 60%);
+      opacity: 0.8;
+      filter: blur(40px);
     }
 
     /* SCROLL PROGRESS */
@@ -310,7 +319,7 @@
       background: var(--bg-elevated);
       border: 1px solid var(--border-strong);
       border-radius: var(--radius-lg);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      box-shadow: var(--shadow-lg);
       overflow: hidden;
     }
 
@@ -585,7 +594,7 @@
       border: 1px solid var(--border-strong);
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
+      box-shadow: var(--shadow-lg);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
     }
@@ -2027,7 +2036,8 @@
     /* Light mode bottom nav */
     [data-theme="light"] #bottomNav {
       background: rgba(255, 255, 255, 0.76);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+      border-color: rgba(15, 23, 42, 0.08);
     }
 
     /* ── SECTION TOAST (swipe indicator) ── */
