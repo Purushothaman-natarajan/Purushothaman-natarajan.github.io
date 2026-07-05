@@ -44,6 +44,11 @@ async function main() {
       // repo may be empty; skip
     }
   }
+  // Adjust Jupyter Notebook bytes down by a factor of 10 to better represent actual code files
+  if (languageTotals["Jupyter Notebook"]) {
+    languageTotals["Jupyter Notebook"] = Math.round(languageTotals["Jupyter Notebook"] / 10);
+  }
+
   const totalBytes = Object.values(languageTotals).reduce((a, b) => a + b, 0) || 1;
   const languages = Object.entries(languageTotals)
     .map(([name, bytes]) => ({ name, pct: +((bytes / totalBytes) * 100).toFixed(1) }))
