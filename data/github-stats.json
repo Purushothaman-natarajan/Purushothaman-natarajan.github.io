@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-01T05:53:19.768Z",
+  "generatedAt": "2026-09-01T08:18:12.963Z",
   "username": "Purushothaman-natarajan",
-  "totalRepos": 30,
+  "totalRepos": 31,
   "totalStars": 53,
   "languages": [
     {
       "name": "HTML",
-      "pct": 64.9
+      "pct": 63.8
     },
     {
       "name": "Jupyter Notebook",
-      "pct": 18.7
+      "pct": 18.3
     },
     {
       "name": "Python",
-      "pct": 12.2
+      "pct": 13.3
     },
     {
       "name": "TypeScript",
-      "pct": 3.4
+      "pct": 3.7
     },
     {
       "name": "CSS",
-      "pct": 0.5
+      "pct": 0.6
     },
     {
       "name": "Batchfile",
@@ -44,9 +44,9 @@
     "url": "https://github.com/Purushothaman-natarajan/Synth-SONAR"
   },
   "mostRecentlyActive": {
-    "name": "Purushothaman-natarajan.github.io",
+    "name": "scrap_snaps",
     "description": null,
-    "pushedAt": "2026-07-05T12:19:20Z",
-    "url": "https://github.com/Purushothaman-natarajan/Purushothaman-natarajan.github.io"
+    "pushedAt": "2026-08-21T05:17:59Z",
+    "url": "https://github.com/Purushothaman-natarajan/scrap_snaps"
   }
 }
