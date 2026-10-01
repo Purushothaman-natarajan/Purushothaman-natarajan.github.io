@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-01T08:18:12.963Z",
+  "generatedAt": "2026-10-01T09:46:10.290Z",
   "username": "Purushothaman-natarajan",
-  "totalRepos": 31,
+  "totalRepos": 32,
   "totalStars": 53,
   "languages": [
     {
       "name": "HTML",
-      "pct": 63.8
+      "pct": 63.5
     },
     {
       "name": "Jupyter Notebook",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Python",
-      "pct": 13.3
+      "pct": 13.7
     },
     {
       "name": "TypeScript",
@@ -44,9 +44,9 @@
     "url": "https://github.com/Purushothaman-natarajan/Synth-SONAR"
   },
   "mostRecentlyActive": {
-    "name": "scrap_snaps",
+    "name": "PINN",
     "description": null,
-    "pushedAt": "2026-08-21T05:17:59Z",
-    "url": "https://github.com/Purushothaman-natarajan/scrap_snaps"
+    "pushedAt": "2026-09-28T19:50:06Z",
+    "url": "https://github.com/Purushothaman-natarajan/PINN"
   }
 }
